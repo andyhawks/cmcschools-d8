@@ -1,0 +1,22 @@
+name: Opigno Commerce
+type: module
+description: Integrated Opigno with commerce
+# core: 8.x
+package: Opigno
+dependencies:
+  - opigno_learning_path
+  - commerce
+  - commerce_cart
+  - commerce_checkout
+  - commerce_log
+  - commerce_order
+  - commerce_payment
+  - commerce_price
+  - commerce_product
+  - commerce_store
+
+# Information added by Drupal.org packaging script on 2018-12-07
+version: '8.x-1.0'
+core: '8.x'
+project: 'opigno_commerce'
+datestamp: 1544204600

@@ -1,0 +1,16 @@
+<?php
+
+/*
+ * Implements hook_install().
+ *
+ * Rebuild Index search after install module.
+ */
+function opigno_search_install() {
+  $index = \Drupal\search_api\Entity\Index::load('default_index');
+  $index->disable();
+  $index->save();
+  $index->enable();
+  $index->rebuildTracker();
+  $index->reindex();
+  $index->save();
+}
